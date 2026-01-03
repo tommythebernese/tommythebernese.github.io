@@ -322,6 +322,46 @@
         }
 
         renderPortfolio();
+        // Tap-to-play toggle for mobile devices
+        function togglePlay(el) {
+            if (el.paused) {
+                safePlay(el);
+            } else {
+                el.pause();
+            }
+        }
+
+        function renderPortfolio() {
+            const container = document.getElementById('portfolioSlider');
+            container.innerHTML = portfolioVideos.map(video => `
+                <div class="flex-shrink-0 w-full md:w-[320px] snap-center">
+                    <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden relative group cursor-pointer shadow-2xl border border-white/5" 
+                         onclick="togglePlay(this.querySelector('video'))">
+                        <video 
+                            src="${video.src}" 
+                            class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" 
+                            muted 
+                            loop 
+                            playsinline
+                            webkit-playsinline
+                            onerror="handleVideoError(this)"
+                            onmouseover="safePlay(this)"
+                            onmouseout="this.pause()">
+                        </video>
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <i data-lucide="play" class="w-16 h-16 text-white/30 group-hover:text-brand-orange group-hover:scale-110 transition opacity-100 group-hover:opacity-0"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent pointer-events-none">
+                            <span class="${video.color} text-white text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">${video.cat}</span>
+                            <h4 class="text-lg font-bold">${video.title}</h4>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        renderPortfolio();
 
         // Scroll Logic
         const nav = document.getElementById('mainNav');
