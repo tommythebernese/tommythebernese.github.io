@@ -106,7 +106,46 @@
             </div>
         </div>
     </section>
+<section id="about" class="py-24 bg-[#1a1a1a]">
+        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative group flex justify-center">
+                <div class="absolute -inset-8 brand-gradient rounded-full opacity-20 group-hover:opacity-30 transition duration-1000 blur-3xl"></div>
+                <div class="polaroid-frame relative w-full max-w-[400px]">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-gray-200">
+                        <div class="slideshow-container absolute inset-0">
+                            <img src="/photo1.jpg" alt="Tommy 1" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700">,
+                            <img src="/photo2.jpg" alt="Tommy 2" class="polaroid-slide absolute inset-0 w-full h-full object-contain bg-brand-purple/20 transition-opacity duration-700 opacity-0">
+                            <img src="/photo3.jpg" alt="Tommy 3" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                            <img src="/photo4.jpg" alt="Tommy 4" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                            <img src="/photo5.jpg" alt="Tommy 5" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+                        </div>
+                        <div class="polaroid-tint absolute inset-0 pointer-events-none"></div>
+                    </div>
+                    <div class="pt-6 text-center">
+                        <p class="font-serif italic text-gray-800 text-xl">Dallas, TX</p>
+                    </div>
+                </div>
+            </div>
 
+            <div>
+                <h2 class="text-brand-orange font-bold uppercase tracking-widest text-sm mb-4">The Creator</h2>
+                <h3 class="text-5xl font-black mb-8 leading-tight">Born in California,<br>Raised in Texas,<br>Loved Everywhere.</h3>
+                <p class="text-xl text-gray-400 leading-relaxed mb-8">
+                    Born October 11, 2023, in Ramona, CA. Tommy blends humor, POV storytelling, and relatable Bernese charm to create content that sticks. 
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3 text-gray-300">
+                        <i data-lucide="check-circle-2" class="text-brand-orange w-6 h-6"></i>
+                        <span>Wholesome & Funny Tone</span>
+                    </li>
+                    <li class="flex items-center space-x-3 text-gray-300">
+                        <i data-lucide="check-circle-2" class="text-brand-orange w-6 h-6"></i>
+                        <span>Professional Video & AI Editing</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <section id="portfolio" class="py-24 bg-[#0f0f0f] overflow-hidden">
         <div class="max-w-6xl mx-auto px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -240,6 +279,22 @@
             const move = direction === 'left' ? -350 : 350;
             slider.scrollBy({ left: move, behavior: 'smooth' });
         }
-    </script>
+// Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.polaroid-slide');
+        setInterval(() => {
+            if (slides.length > 0) {
+                slides[currentSlide].style.opacity = '0';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.opacity = '1';
+            }
+        }, 2000);
+
+        function scrollPortfolio(direction) {
+            const slider = document.getElementById('portfolioSlider');
+            const move = direction === 'left' ? -350 : 350;
+            slider.scrollBy({ left: move, behavior: 'smooth' });
+        }
+</script>
 </body>
 </html>
