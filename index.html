@@ -84,22 +84,25 @@
                 <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-2">Audience Impact</h2>
                 <h3 class="text-4xl md:text-6xl font-black italic font-serif">115% Engagement Rate</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
-                    <i data-lucide="instagram" class="w-8 h-8 mb-4 text-pink-600"></i>
-                    <span class="text-5xl font-black mb-2">24K+</span>
-                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Instagram</span>
-                </div>
-                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
-                    <i data-lucide="facebook" class="w-8 h-8 mb-4 text-blue-600"></i>
-                    <span class="text-5xl font-black mb-2">22K+</span>
-                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Facebook</span>
-                </div>
-                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
-                    <i data-lucide="music-2" class="w-8 h-8 mb-4 text-black"></i>
-                    <span class="text-5xl font-black mb-2">2K+</span>
-                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">TikTok</span>
-                </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <a href="https://www.instagram.com/tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
+        <i data-lucide="instagram" class="w-8 h-8 mb-4 text-pink-600 group-hover:scale-110 transition-transform"></i>
+        <span class="text-5xl font-black mb-2">24K+</span>
+        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Instagram</span>
+    </a>
+    
+    <a href="https://www.facebook.com/tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
+        <i data-lucide="facebook" class="w-8 h-8 mb-4 text-blue-600 group-hover:scale-110 transition-transform"></i>
+        <span class="text-5xl font-black mb-2">22K+</span>
+        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Facebook</span>
+    </a>
+    
+    <a href="https://www.tiktok.com/@tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
+        <i data-lucide="music-2" class="w-8 h-8 mb-4 text-black group-hover:scale-110 transition-transform"></i>
+        <span class="text-5xl font-black mb-2">2K+</span>
+        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">TikTok</span>
+    </a>
+</div>
             </div>
         </div>
     </section>
@@ -145,14 +148,17 @@
         lucide.createIcons();
 
         const portfolioVideos = [
-            { src: "/video1.mp4", cat: "Comedy", title: "When snacks come out", color: "bg-blue-600" },
-            { src: "/video2.mp4", cat: "Lifestyle", title: "A Day in Dallas", color: "bg-blue-600" },
-            { src: "/video3.mp4", cat: "UGC / Collab", title: "Organic Brand Integration", color: "bg-green-600" },
-            { src: "/video4.mp4", cat: "Tips", title: "Bernese Grooming 101", color: "bg-purple-600" },
-            { src: "/video5.mp4", cat: "Trending", title: "Original Reels Twist", color: "bg-red-600" },
-            { src: "/video6.mp4", cat: "POV", title: "POV: You have a Bernese", color: "bg-yellow-600" },
-            { src: "/video7.mp4", cat: "Day in Life", title: "Dallas Morning Routine", color: "bg-pink-600" },
-            { src: "/video8.mp4", cat: "Highlight", title: "Brand Spotlight Reel", color: "bg-indigo-600" }
+            { src: "/video1.mp4", cat: "Comedy", title: "When getting scratched by both ears", color: "bg-orange-600" },
+            { src: "/video2.mp4", cat: "UGC / Collab", title: "This is your sign to stock up on all your pets needs while they are getting groomed", color: "bg-green-600" },
+            { src: "/video3.mp4", cat: "UGC / Collab", title: "Traveling with Your Dog", color: "bg-green-600" },
+            { src: "/video11.mp4", cat: "AI", title: "Tommy on the sets of some of the most iconic Christmas movies 🎥🎅", color: "bg-sky-600" },
+            { src: "/video4.mp4", cat: "UGC / Collab", title: "My Dog's Favorite Recipe", color: "bg-green-600" },
+            { src: "/video9.mp4", cat: "Comedy", title: "Dream Vacation?", color: "bg-orange-600" },
+            { src: "/video5.mp4", cat: "UGC / Collab", title: "Big Breed Issues", color: "bg-green-600" },
+            { src: "/video6.mp4", cat: "UGC / Collab", title: "POV: You Love Watching Sports with Your Dog", color: "bg-green-600" },
+            { src: "/video7.mp4", cat: "UGC / Collab", title: "Pack with Me and My Dog", color: "bg-green-600" },
+            { src: "/video8.mp4", cat: "UGC / Collab", title: "Better Diet, Healthier Pups", color: "bg-green-600" },
+            { src: "/video10.mp4", cat: "Comedy", title: "Tommy Getting Hangry", color: "bg-orange-600" }
         ];
 
         function handleVideoError(el) {
