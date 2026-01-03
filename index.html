@@ -123,23 +123,33 @@
         </div>
     </section>
 
-    <!-- Reach Section (Dynamic Rotator) -->
+    <!-- Reach Section -->
     <section id="stats" class="py-24 bg-white text-black relative">
         <div class="max-w-6xl mx-auto px-8">
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-2">Audience Impact</h2>
-                <h3 class="text-4xl md:text-6xl font-black italic font-serif">Viral Influence</h3>
+                <h3 class="text-4xl md:text-6xl font-black italic font-serif">115% Engagement Rate</h3>
             </div>
             
-            <div id="statContainer" class="stat-fade p-12 md:p-24 rounded-[3rem] border border-gray-100 shadow-2xl bg-gray-50 flex flex-col items-center justify-center text-center">
-                <div id="statIcon" class="mb-8">
-                    <i data-lucide="users" class="w-16 h-16 text-brand-orange"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Instagram -->
+                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
+                    <i data-lucide="instagram" class="w-8 h-8 mb-4 text-pink-600"></i>
+                    <span class="text-5xl font-black mb-2">24K+</span>
+                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Instagram</span>
                 </div>
-                <div class="flex items-baseline mb-4">
-                    <span id="statNumber" class="text-6xl md:text-9xl font-black tabular-nums tracking-tighter">0</span>
-                    <span class="text-4xl md:text-6xl font-black text-brand-orange ml-1">+</span>
+                <!-- Facebook -->
+                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
+                    <i data-lucide="facebook" class="w-8 h-8 mb-4 text-blue-600"></i>
+                    <span class="text-5xl font-black mb-2">22K+</span>
+                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Facebook</span>
                 </div>
-                <span id="statLabel" class="text-gray-500 font-bold tracking-[0.2em] uppercase text-lg md:text-2xl">Total Reach</span>
+                <!-- TikTok -->
+                <div class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center">
+                    <i data-lucide="music-2" class="w-8 h-8 mb-4 text-black"></i>
+                    <span class="text-5xl font-black mb-2">2K+</span>
+                    <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">TikTok</span>
+                </div>
             </div>
         </div>
     </section>
@@ -155,12 +165,9 @@
                     <div class="relative overflow-hidden aspect-[4/5] bg-gray-200">
                         <!-- Slides -->
                         <div class="slideshow-container absolute inset-0">
-                            <img src="/photo1.jpg" alt="Tommy 1" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
-                            <img src="/photo2.jpg" alt="Tommy 2" class="polaroid-slide absolute inset-0 w-full h-full object-contain bg-brand-purple/20 transition-opacity duration-700 opacity-0">
+                            <img src="photo1.jpg" alt="Tommy 1" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
+                            <img src="photo2.jpg" alt="Tommy 2" class="polaroid-slide absolute inset-0 w-full h-full object-contain bg-brand-purple/20 transition-opacity duration-700 opacity-0">
                             <img src="/photo3.jpg" alt="Tommy 3" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                            <img src="/photo4.jpg" alt="Tommy 3" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                            <img src="/photo5.jpg" alt="Tommy 3" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                            
                         </div>
                         <!-- Tint Overlay -->
                         <div class="polaroid-tint absolute inset-0 pointer-events-none"></div>
@@ -252,7 +259,7 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
-        <p>© 2026 Tommy the Bernese. All rights reserved.</p>
+        <p>© 2024 Tommy the Bernese. All rights reserved.</p>
     </footer>
 
     <script>
@@ -266,14 +273,13 @@
             { src: "/video2.mp4", cat: "Lifestyle", title: "A Day in Dallas", color: "bg-blue-600" },
             { src: "/video3.mp4", cat: "UGC / Collab", title: "Organic Brand Integration", color: "bg-green-600" },
             { src: "/video4.mp4", cat: "Tips", title: "Bernese Grooming 101", color: "bg-purple-600" },
-            { src: "/video5.mov", cat: "Trending", title: "Original Reels Twist", color: "bg-red-600" },
+            { src: "/video5.mp4", cat: "Trending", title: "Original Reels Twist", color: "bg-red-600" },
             { src: "/video6.mp4", cat: "POV", title: "POV: You have a Bernese", color: "bg-yellow-600" },
             { src: "/video7.mp4", cat: "Day in Life", title: "Dallas Morning Routine", color: "bg-pink-600" },
             { src: "/video8.mp4", cat: "Highlight", title: "Brand Spotlight Reel", color: "bg-indigo-600" }
         ];
 
         function handleVideoError(el) {
-            // Hide the video element and show placeholder if source fails
             el.classList.add('hidden');
             el.parentElement.classList.add('video-placeholder');
             console.warn(`Video source not found: ${el.src}`);
@@ -281,12 +287,10 @@
 
         async function safePlay(el) {
             try {
-                if (el.readyState >= 2) { // HAVE_CURRENT_DATA
+                if (el.readyState >= 2) {
                     await el.play();
                 }
-            } catch (err) {
-                // Silently catch play interruptions or source errors
-            }
+            } catch (err) {}
         }
 
         function renderPortfolio() {
@@ -345,59 +349,6 @@
                 slides[currentSlide].style.opacity = '1';
             }
         }, 2000);
-
-        // Reach Stats Rotator
-        const statsData = [
-            { label: "Total Reach", value: 48000, icon: "users" },
-            { label: "Total Views", value: 11000000, icon: "eye" },
-            { label: "Viral Shares", value: 200000, icon: "share-2" }
-        ];
-
-        let currentStatIndex = 0;
-        const statContainer = document.getElementById('statContainer');
-        const statIcon = document.getElementById('statIcon');
-        const statNumber = document.getElementById('statNumber');
-        const statLabel = document.getElementById('statLabel');
-
-        function animateNumber(target) {
-            let start = 0;
-            const duration = 2000;
-            const startTime = performance.now();
-
-            function update(now) {
-                const elapsed = now - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const easeOut = 1 - Math.pow(1 - progress, 4);
-                const current = Math.floor(easeOut * target);
-                
-                statNumber.textContent = current.toLocaleString();
-
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        function rotateStats() {
-            statContainer.classList.add('stat-hidden');
-
-            setTimeout(() => {
-                currentStatIndex = (currentStatIndex + 1) % statsData.length;
-                const data = statsData[currentStatIndex];
-
-                statIcon.innerHTML = `<i data-lucide="${data.icon}" class="w-16 h-16 text-brand-orange"></i>`;
-                statLabel.textContent = data.label;
-                lucide.createIcons();
-
-                statContainer.classList.remove('stat-hidden');
-                animateNumber(data.value);
-            }, 600);
-        }
-
-        // Initialize Rotator
-        window.addEventListener('load', () => {
-            animateNumber(statsData[0].value);
-            setInterval(rotateStats, 5000);
-        });
 
         function scrollPortfolio(direction) {
             const slider = document.getElementById('portfolioSlider');
