@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommy the Bernese | Media Kit & Rate Card</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#3e327c',
+                            purpleDark: '#2d245c',
+                            orange: '#f97316',
+                            orangeLight: '#ffedd5',
+                            bgGray: '#f8f9fc',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        .card-hover {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(62, 50, 124, 0.1), 0 8px 10px -6px rgba(62, 50, 124, 0.1);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #3e327c 0%, #2d245c 100%);
+        }
+
+        .orange-glow {
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-brand-bgGray text-gray-800 font-sans leading-relaxed">
+
+    <!-- Header / Hero Section -->
+    <header class="gradient-bg text-white pt-16 pb-28 px-6 shadow-2xl relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Tommy the Bernese</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 mb-8">Wholesome Storytelling • Professional Edits • Dallas, TX</p>
+            <div class="inline-block bg-brand-orange text-white font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform">
+                Media Kit & Rate Card 2026
+            </div>
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-60 h-60 bg-brand-orange opacity-10 rounded-full blur-2xl"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 -mt-16 relative z-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-20">
+
+        <!-- Intro Section -->
+        <section class="lg:col-span-12 bg-white rounded-2xl shadow-xl p-8 card-hover border-b-4 border-brand-purple">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold text-brand-purple mb-4">The Creator Behind the Charm</h2>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        I’m <strong>Rashad Guliyev</strong>, based in Dallas. I help brands connect with pet lovers through highly relatable POV storytelling and cinematic edits.
+                    </p>
+                    <p class="text-gray-600">
+                        With a rapidly growing community of <strong>52,000+ followers</strong>, Tommy’s content blends Bernese humor with premium aesthetic quality. We specialize in the <strong>Pet, Lifestyle, Home, and Tech Accessories</strong> niches, delivering content that feels like a recommendation from a friend, not an ad.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="w-56 h-56 bg-brand-orangeLight rounded-2xl flex items-center justify-center border-4 border-brand-orange text-brand-purple font-bold text-xl shadow-xl rotate-3">
+                        <div class="text-center -rotate-3">
+                            <span class="text-4xl">🐶</span><br>
+                            Rashad &<br>Tommy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="lg:col-span-12 pt-4">
+            <h3 class="text-2xl font-bold text-brand-purple mb-8 flex items-center">
+                <span class="w-8 h-1 bg-brand-orange mr-3"></span> Audience Ecosystem
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Stat 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center border-t-8 border-brand-purple card-hover">
+                    <div class="text-5xl font-extrabold text-brand-purple mb-2">52K+</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Total Community</div>
+                    <div class="mt-3 text-xs text-brand-orange font-semibold">Verified IG & FB Reach</div>
+                </div>
+                <!-- Stat 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center border-t-8 border-brand-orange card-hover">
+                    <div class="text-5xl font-extrabold text-brand-purple mb-2">170K+</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Monthly Impressions</div>
+                    <div class="mt-3 text-xs text-brand-orange font-semibold">High Organic Visibility</div>
+                </div>
+                <!-- Stat 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center border-t-8 border-brand-purple card-hover">
+                    <div class="text-5xl font-extrabold text-brand-purple mb-2">92%</div>
+                    <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">US Based Audience</div>
+                    <div class="mt-3 text-xs text-brand-orange font-semibold">Localized Dallas Influence</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="lg:col-span-5 bg-white rounded-2xl shadow-md p-6 flex flex-col border border-gray-100">
+            <h4 class="text-lg font-bold text-brand-purple mb-1">Platform Distribution</h4>
+            <p class="text-sm text-gray-400 mb-6">Equally strong across Facebook & Instagram.</p>
+            <div class="chart-container">
+                <canvas id="platformChart"></canvas>
+            </div>
+            <div class="mt-6 p-4 bg-brand-purple bg-opacity-5 rounded-xl text-sm text-brand-purple leading-relaxed">
+                <strong>Strategy:</strong> By posting natively to both platforms, we capture the high-viral potential of IG Reels and the long-term retention of FB Video.
+            </div>
+        </section>
+
+        <section class="lg:col-span-7 bg-white rounded-2xl shadow-md p-6 flex flex-col border border-gray-100">
+            <h4 class="text-lg font-bold text-brand-purple mb-1">Primary Demographics</h4>
+            <p class="text-sm text-gray-400 mb-6">Audience composition by interest and age.</p>
+            <div class="chart-container">
+                <canvas id="demographicsChart"></canvas>
+            </div>
+            <div class="mt-6 p-4 bg-brand-orange bg-opacity-5 rounded-xl text-sm text-brand-orange leading-relaxed font-medium">
+                <strong>Top Interests:</strong> Pet Nutrition, Home Decor, Outdoor Lifestyle, and Smart Home Tech.
+            </div>
+        </section>
+
+        <!-- Rate Card -->
+        <section class="lg:col-span-12 mt-12">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-brand-purple mb-3">Service Menu & Rates</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Premium content creation for brands looking for authenticity and professional execution.</p>
+            </div>
+
+            <!-- UGC Section -->
+            <div class="mb-16">
+                <h3 class="text-xl font-bold text-white bg-brand-purple inline-block px-6 py-2 rounded-lg mb-8 shadow-md">
+                    1. UGC Content (For Your Brand Pages)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- UGC 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col card-hover">
+                        <div class="text-gray-400 font-bold text-xs uppercase mb-2">Starter Pack</div>
+                        <div class="text-3xl font-bold text-brand-purple mb-4">$250</div>
+                        <h4 class="font-bold mb-4 text-gray-700">1 Custom UGC Video</h4>
+                        <ul class="text-sm space-y-4 text-gray-600 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> 15-30s High-Quality Edit</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Full Commercial Rights</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Scripting & Hook Strategy</li>
+                        </ul>
+                        <div class="text-xs text-gray-400 text-center italic">Best for product testimonials</div>
+                    </div>
+                    <!-- UGC 2 - Featured -->
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 border-2 border-brand-orange flex flex-col card-hover transform lg:-translate-y-4 relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-orange text-white text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+                        <div class="text-gray-400 font-bold text-xs uppercase mb-2">The Ad Bundle</div>
+                        <div class="text-3xl font-bold text-brand-purple mb-4">$650</div>
+                        <h4 class="font-bold mb-4 text-gray-700">3 Optimized UGC Pieces</h4>
+                        <ul class="text-sm space-y-4 text-gray-600 mb-8 flex-grow">
+                            <li class="flex items-center font-semibold"><span class="text-brand-orange mr-2">●</span> 3 Different Hook Variations</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> A/B Testing Friendly</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Professional Color Grading</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Raw Footage Option Included</li>
+                        </ul>
+                        <button class="w-full bg-brand-orange text-white font-bold py-3 rounded-xl shadow-lg">Inquire Now</button>
+                    </div>
+                    <!-- UGC 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col card-hover">
+                        <div class="text-gray-400 font-bold text-xs uppercase mb-2">Monthly Retainer</div>
+                        <div class="text-3xl font-bold text-brand-purple mb-4">$1,250</div>
+                        <h4 class="font-bold mb-4 text-gray-700">6 Monthly UGC Videos</h4>
+                        <ul class="text-sm space-y-4 text-gray-600 mb-8 flex-grow">
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Dedicated Storytelling Arc</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Seasonal Concepts</li>
+                            <li class="flex items-center"><span class="text-brand-orange mr-2">●</span> Priority Turnaround (5 Days)</li>
+                        </ul>
+                        <div class="text-xs text-gray-400 text-center italic">Best for long-term brand growth</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sponsorship Section -->
+            <div>
+                <h3 class="text-xl font-bold text-white bg-brand-purple inline-block px-6 py-2 rounded-lg mb-8 shadow-md">
+                    2. Sponsored Collaborations (Shared to Our 52K Feed)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-8 border-brand-orange flex justify-between items-center card-hover">
+                        <div>
+                            <h4 class="font-bold text-brand-purple text-lg">IG & FB Reel Dual Post</h4>
+                            <p class="text-sm text-gray-500">Cross-posted to both feeds for max reach.</p>
+                        </div>
+                        <div class="text-2xl font-bold text-brand-purple">$550</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-8 border-brand-purple flex justify-between items-center card-hover">
+                        <div>
+                            <h4 class="font-bold text-brand-purple text-lg">Story Sequence</h4>
+                            <p class="text-sm text-gray-500">3 Frames with direct Link Stickers.</p>
+                        </div>
+                        <div class="text-2xl font-bold text-brand-purple">$250</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-8 border-brand-purple flex justify-between items-center card-hover">
+                        <div>
+                            <h4 class="font-bold text-brand-purple text-lg">Whitelisting / Dark Posts</h4>
+                            <p class="text-sm text-gray-500">Usage for paid ads (30-day access).</p>
+                        </div>
+                        <div class="text-2xl font-bold text-brand-purple">+$150</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-8 border-brand-orange flex justify-between items-center card-hover">
+                        <div>
+                            <h4 class="font-bold text-brand-purple text-lg">Product Photography Pack</h4>
+                            <p class="text-sm text-gray-500">5 High-Res Lifestyle Images.</p>
+                        </div>
+                        <div class="text-2xl font-bold text-brand-purple">$200</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Section -->
+        <section class="lg:col-span-12 mt-16 bg-brand-purple p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold mb-10 text-center">Our Streamlined Process</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
+                        <p class="font-bold text-sm">Onboarding</p>
+                        <p class="text-[10px] opacity-70">Align on goals</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-white text-brand-purple rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
+                        <p class="font-bold text-sm">Product</p>
+                        <p class="text-[10px] opacity-70">Shipment delivery</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-white text-brand-purple rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
+                        <p class="font-bold text-sm">Scripting</p>
+                        <p class="text-[10px] opacity-70">Concept approval</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-white text-brand-purple rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">4</div>
+                        <p class="font-bold text-sm">Filming</p>
+                        <p class="text-[10px] opacity-70">POV Magic</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-green-400 text-brand-purple rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">5</div>
+                        <p class="font-bold text-sm">Delivery</p>
+                        <p class="text-[10px] opacity-70">Final assets</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative circle -->
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-orange opacity-20 rounded-full blur-2xl"></div>
+        </section>
+
+        <!-- Contact Footer -->
+        <footer class="lg:col-span-12 text-center py-16">
+            <h2 class="text-3xl font-bold text-brand-purple mb-6">Let’s Work Together</h2>
+            <div class="bg-white inline-flex flex-col md:flex-row items-center rounded-2xl shadow-xl p-4 md:p-6 gap-6 orange-glow">
+                <div class="text-left px-4">
+                    <p class="text-xs font-bold text-gray-400 uppercase">Contact Creator</p>
+                    <p class="text-xl font-bold text-brand-purple">Rashad Guliyev</p>
+                </div>
+                <div class="h-10 w-[1px] bg-gray-200 hidden md:block"></div>
+                <div class="flex gap-4">
+                    <div class="bg-brand-purple text-white px-6 py-2 rounded-xl font-bold cursor-pointer hover:bg-brand-orange transition-colors">
+                        Send Message
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-gray-400 text-sm flex justify-center gap-8">
+                <span>Dallas, TX</span>
+                <span>•</span>
+                <span>@TommyTheBernese</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Labels Wrapping Helper ---
+        function wrapLabel(str, max) {
+            if (str.length <= max) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let cur = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (cur.length + words[i].length + 1 <= max) cur += ' ' + words[i];
+                else { lines.push(cur); cur = words[i]; }
+            }
+            lines.push(cur);
+            return lines;
+        }
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(items) {
+                    const l = items[0].chart.data.labels[items[0].dataIndex];
+                    return Array.isArray(l) ? l.join(' ') : l;
+                }
+            }
+        };
+
+        // --- Platform Chart ---
+        const platformCtx = document.getElementById('platformChart').getContext('2d');
+        new Chart(platformCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [wrapLabel('Instagram (24K)', 12), wrapLabel('Facebook (24K)', 12), wrapLabel('TikTok/Other (4K)', 12)],
+                datasets: [{
+                    data: [24000, 24000, 4000],
+                    backgroundColor: ['#3e327c', '#f97316', '#e2e8f0'],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { family: 'Poppins', size: 11 }, usePointStyle: true, padding: 20 } },
+                    tooltip: tooltipConfig
+                },
+                cutout: '75%'
+            }
+        });
+
+        // --- Demographics Chart ---
+        const demoCtx = document.getElementById('demographicsChart').getContext('2d');
+        new Chart(demoCtx, {
+            type: 'bar',
+            data: {
+                labels: [wrapLabel('Women 25-34', 12), wrapLabel('Women 35-44', 12), wrapLabel('Men 25-44', 12), wrapLabel('Pet Owners', 12), wrapLabel('Home Decor', 12)],
+                datasets: [{
+                    label: 'Audience Interest %',
+                    data: [42, 28, 15, 85, 65],
+                    backgroundColor: '#3e327c',
+                    borderRadius: 8,
+                    barThickness: 24
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    x: { display: false, grid: { display: false } },
+                    y: { grid: { display: false }, ticks: { font: { family: 'Poppins', weight: '600' } } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
