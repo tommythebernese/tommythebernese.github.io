@@ -17,7 +17,7 @@ The [Refresh creator data](.github/workflows/refresh-social.yml) GitHub Action r
 | `TIKTOK_REFRESH_TOKEN` | Secret | Owner-authorized TikTok refresh token with `user.info.stats` and `user.info.profile` scopes. |
 | `SOCIAL_SECRETS_PAT` | Secret | Fine-grained GitHub token with repository **Secrets: read/write** permission so the workflow can save a rotated TikTok refresh token. |
 
-Start with YouTube if you want a simple first connection. Meta needs a professional Instagram account and suitable permissions. TikTok needs an approved developer app and creator authorization. Add the secrets directly in GitHub; never paste tokens into the repo or a chat. The Action commits only public counts, dated aggregate metrics, and post metadata to `data/social.json`.
+Meta, YouTube, and TikTok require their owner-authorized credentials. The current TikTok connection uses a sandbox target account; production use may require TikTok app review. Add secrets directly in GitHub; never paste tokens into the repo or a chat. The Action commits only public counts, dated aggregate metrics, and post metadata to `data/social.json`.
 
 The workflow uses `GITHUB_TOKEN` with **Contents: write** to commit refreshed JSON. If your repository limits workflow write access, enable it in **Settings → Actions → General → Workflow permissions**. Pages must publish from the `main` branch root (or deploy through your existing Pages workflow).
 
@@ -27,11 +27,11 @@ The workflow uses `GITHUB_TOKEN` with **Contents: write** to commit refreshed JS
 - Facebook Page followers when Meta supplies the `followers_count` field.
 - TikTok follower count using the authorized Display API account.
 - YouTube subscriber count and lifetime public views. YouTube rounds subscriber counts, so this is a platform-reported figure.
-- Instagram videos in the available media feed whose captions contain an explicit `#ad`, `#sponsored`, `#paidpartnership`, `#brandpartner`, `#brandambassador`, or “paid partnership” disclosure. A product mention alone is never interpreted as paid work.
+- Instagram videos in the available media feed with an ad disclosure, a caption @mention, or an owner-confirmed partnership URL. The Partnerships carousel includes tagged posts but labels them `TAGGED POST`; a tag alone is not a paid-work claim. The carousel moves when a mouse hovers near either edge and also supports touch or arrow keys.
 
-If a source is not connected, the site links to its profile without inventing a number. A failed API request preserves the last successful value and reports an Action failure. Check the Action logs and `sourceUpdatedAt` in the JSON when assessing freshness. The Instagram API only returns media accessible under the granted permissions; the showcase may be empty until those are connected.
+Displayed metrics use rounded approximations, such as `~32K` for 31,721; a `+` is used only below the actual count. If a source is not connected, the site links to its profile without inventing a number. A failed API request preserves the last successful value and reports an Action failure. Check the Action logs and `sourceUpdatedAt` in the JSON when assessing freshness. The Instagram API only returns media accessible under the granted permissions; the showcase may be empty until those are connected.
 
-To include a paid partnership that lacks one of those disclosures, add its Instagram permalink to `confirmedInstagramPermalinks` in `data/partnerships.json`. Only add a link when Tommy's team has confirmed that relationship. The media must also appear in the authorized Instagram media feed. The automated scan checks up to 1,000 accessible media items; if an older campaign is missing, add a separate curated card after confirming the partnership.
+To include a paid partnership that lacks one of those disclosures, add its Instagram permalink to `confirmedInstagramPermalinks` in `data/partnerships.json`. Only add a link when Tommy's team has confirmed that relationship. The media must also appear in the authorized Instagram media feed. The automated scan checks up to 1,000 accessible media items and shows up to nine cards. Instagram API data may not expose accounts tagged only inside the media without a caption mention. If an older campaign is missing, add a separate curated card after confirming the partnership.
 
 ## Local preview
 
