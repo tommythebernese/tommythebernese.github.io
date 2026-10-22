@@ -19,6 +19,7 @@ DATA = ROOT / "data" / "social.json"
 CONFIRMED = ROOT / "data" / "partnerships.json"
 GRAPH_VERSION = os.getenv("META_GRAPH_VERSION", "v24.0")
 DISCLOSURE = re.compile(r"(?i)(?:#(?:ad|sponsored|paidpartnership|brandpartner|brandambassador)\b|\bpaid partnership\b)")
+ACCOUNT_TAG = re.compile(r"(?<![\w@])@[A-Za-z0-9._]{2,30}\b")
 INSTAGRAM_URL = re.compile(r"^https://(?:www\.)?instagram\.com/(?:p|reel|reels)/[^/?#]+/?")
 
 
@@ -92,19 +93,25 @@ def refresh_instagram(data, now):
         data["insights"]["instagramRecentAverageInteractions"] = round(sum(recent) / len(recent)) if recent else None
         confirmed = set(json.loads(CONFIRMED.read_text()).get("confirmedInstagramPermalinks", []))
         selected = []
+        confirmed_urls = {u.rstrip("/") for u in confirmed}
         for post in posts:
             permalink = post.get("permalink", "")
             if not INSTAGRAM_URL.match(permalink):
                 continue
             caption = post.get("caption") or ""
-            is_confirmed = permalink in confirmed or permalink.rstrip("/") in {u.rstrip("/") for u in confirmed}
+            is_confirmed = permalink.rstrip("/") in confirmed_urls
             if post.get("media_type") != "VIDEO" and post.get("media_product_type") != "REELS":
                 continue
-            if not (is_confirmed or DISCLOSURE.search(caption)):
+            is_disclosed = bool(DISCLOSURE.search(caption))
+            is_tagged = bool(ACCOUNT_TAG.search(caption))
+            if not (is_confirmed or is_disclosed or is_tagged):
                 continue
             clean = re.sub(r"\s+", " ", caption).strip()
-            selected.append({"permalink": permalink, "thumbnail": post.get("thumbnail_url") or post.get("media_url") or "", "title": clean[:64].rstrip(" .,;:") or "Tommy x brand story", "excerpt": clean[:150] + ("…" if len(clean) > 150 else ""), "source": "confirmed" if is_confirmed else "disclosed", "timestamp": post.get("timestamp")})
-        data["partnerships"] = selected[:6]
+            selected.append({"permalink": permalink, "thumbnail": post.get("thumbnail_url") or post.get("media_url") or "", "title": clean[:64].rstrip(" .,;:") or "Tommy x brand story", "excerpt": clean[:150] + ("…" if len(clean) > 150 else ""), "source": "confirmed" if is_confirmed else "disclosed" if is_disclosed else "tagged", "timestamp": post.get("timestamp")})
+        # Keep disclosed work visible alongside newer tagged videos.
+        disclosed = [post for post in selected if post["source"] != "tagged"]
+        tagged = [post for post in selected if post["source"] == "tagged"]
+        data["partnerships"] = (disclosed[:3] + tagged[:6])[:9]
         data["sourceUpdatedAt"]["instagramPosts"] = now
         # Views are requested only for Reels; unsupported media metrics are skipped.
         views = []
