@@ -1,18 +1,21 @@
 {
-  "updatedAt": "2026-10-22T03:06:04+00:00",
+  "updatedAt": "2026-10-22T03:36:55+00:00",
   "followers": {
-    "instagram": null,
-    "facebook": null,
+    "instagram": 31720,
+    "facebook": 46534,
     "tiktok": null,
     "youtube": 523
   },
   "insights": {
-    "instagramRecentAverageInteractions": null,
-    "instagramRecentAverageViews": null,
+    "instagramRecentAverageInteractions": 400,
+    "instagramRecentAverageViews": 7959,
     "youtubeViews": 482385
   },
   "partnerships": [],
   "sourceUpdatedAt": {
-    "youtube": "2026-10-22T03:06:04+00:00"
+    "youtube": "2026-10-22T03:36:55+00:00",
+    "instagram": "2026-10-22T03:36:55+00:00",
+    "instagramPosts": "2026-10-22T03:36:55+00:00",
+    "facebook": "2026-10-22T03:36:55+00:00"
   }
 }
