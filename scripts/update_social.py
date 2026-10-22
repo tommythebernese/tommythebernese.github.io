@@ -78,6 +78,15 @@ def refresh_instagram(data, now):
         posts = media.get("data", [])
         if not isinstance(posts, list):
             raise RuntimeError("Unexpected Instagram media response")
+        # Search the full available feed for older disclosed campaigns; keep a bounded scan.
+        next_url = media.get("paging", {}).get("next")
+        while next_url and len(posts) < 1000:
+            media = request_json(next_url, token=token)
+            page_posts = media.get("data", [])
+            if not isinstance(page_posts, list):
+                raise RuntimeError("Unexpected Instagram media page")
+            posts.extend(page_posts)
+            next_url = media.get("paging", {}).get("next")
         # Likes + comments are public interactions, not a private engagement rate.
         recent = [number(p.get("like_count")) + number(p.get("comments_count")) for p in posts[:12] if number(p.get("like_count")) is not None and number(p.get("comments_count")) is not None]
         data["insights"]["instagramRecentAverageInteractions"] = round(sum(recent) / len(recent)) if recent else None
@@ -89,6 +98,8 @@ def refresh_instagram(data, now):
                 continue
             caption = post.get("caption") or ""
             is_confirmed = permalink in confirmed or permalink.rstrip("/") in {u.rstrip("/") for u in confirmed}
+            if post.get("media_type") != "VIDEO" and post.get("media_product_type") != "REELS":
+                continue
             if not (is_confirmed or DISCLOSURE.search(caption)):
                 continue
             clean = re.sub(r"\s+", " ", caption).strip()
