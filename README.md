@@ -8,7 +8,7 @@ The [Refresh creator data](.github/workflows/refresh-social.yml) GitHub Action r
 
 | Name | Type | Purpose |
 | --- | --- | --- |
-| `META_ACCESS_TOKEN` | Secret | Long-lived authorized Meta token for Tommy's linked Instagram professional account and Facebook Page. Grant account/media/insights and Page read access. Renew it before expiry. |
+| `META_ACCESS_TOKEN` | Secret | Authorized non-expiring Meta system-user token for Tommy's Instagram professional account and Facebook Page, with read-focused permissions. Non-expiring means no scheduled expiry; access can still be revoked or changed by Meta. |
 | `INSTAGRAM_USER_ID` | Variable | Instagram professional account numeric ID. |
 | `FACEBOOK_PAGE_ID` | Variable | Tommy's Facebook Page numeric ID. The API must return `followers_count`; the site will never show Page likes as followers. |
 | `YOUTUBE_API_KEY` | Secret | YouTube Data API v3 key. The script looks up `@tommythebernese` using `channels.list(forHandle)`. |
@@ -27,11 +27,11 @@ The workflow uses `GITHUB_TOKEN` with **Contents: write** to commit refreshed JS
 - Facebook Page followers when Meta supplies the `followers_count` field.
 - TikTok follower count using the authorized Display API account.
 - YouTube subscriber count and lifetime public views. YouTube rounds subscriber counts, so this is a platform-reported figure.
-- Recent Instagram posts whose captions contain an explicit `#ad`, `#sponsored`, `#paidpartnership`, `#brandpartner`, `#brandambassador`, or “paid partnership” disclosure. A product mention alone is never interpreted as paid work.
+- Instagram videos in the available media feed whose captions contain an explicit `#ad`, `#sponsored`, `#paidpartnership`, `#brandpartner`, `#brandambassador`, or “paid partnership” disclosure. A product mention alone is never interpreted as paid work.
 
 If a source is not connected, the site links to its profile without inventing a number. A failed API request preserves the last successful value and reports an Action failure. Check the Action logs and `sourceUpdatedAt` in the JSON when assessing freshness. The Instagram API only returns media accessible under the granted permissions; the showcase may be empty until those are connected.
 
-To include a paid partnership that lacks one of those disclosures, add its Instagram permalink to `confirmedInstagramPermalinks` in `data/partnerships.json`. Only add a link when Tommy's team has confirmed that relationship. The media must also appear in the authorized Instagram media feed. If a campaign is older than the 100 most recent posts, increase the media retrieval limit or add a separate curated card.
+To include a paid partnership that lacks one of those disclosures, add its Instagram permalink to `confirmedInstagramPermalinks` in `data/partnerships.json`. Only add a link when Tommy's team has confirmed that relationship. The media must also appear in the authorized Instagram media feed. The automated scan checks up to 1,000 accessible media items; if an older campaign is missing, add a separate curated card after confirming the partnership.
 
 ## Local preview
 
