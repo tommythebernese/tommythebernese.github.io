@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T03:36:55+00:00",
+  "updatedAt": "2026-10-22T03:39:53+00:00",
   "followers": {
     "instagram": 31720,
     "facebook": 46534,
@@ -8,14 +8,31 @@
   },
   "insights": {
     "instagramRecentAverageInteractions": 400,
-    "instagramRecentAverageViews": 7959,
+    "instagramRecentAverageViews": 7961,
     "youtubeViews": 482385
   },
-  "partnerships": [],
+  "partnerships": [
+    {
+      "permalink": "https://www.instagram.com/reel/DMdHbCJs1Pl/",
+      "thumbnail": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/522419242_1629281717766025_2208122757067372568_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=o4F38Cri4skQ7kNvwGkrnvm&_nc_oc=AdorAz1HFD_4F11tSFu710PW94IeirtFZgEnDKFNv3przJq1sVhLWQcLh5_8pLtWxsg&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=iCijoQNIH8us_dFe4b9Xjg&_nc_tpa=Q5bMBQJcRJQv94yXx0WBwZwRsl0VhFnnQJ2Kkl0858aPr2w2AYn7JxcxvxnGkdA3BBydVd_OYcsYAIRPBQ&oh=00_AQOjwdzToncKia-0m5nZX1TQhdcFbZdRnPdJb1skYBIV4g&oe=6ADF43F0",
+      "title": "#EdgardCooperPartner We found Tommy’s new favorite food from @ed",
+      "excerpt": "#EdgardCooperPartner We found Tommy’s new favorite food from @edgardcooper! 🐶 You can grab it now at PetSmart in-store or online at PetSmart.com. Don’…",
+      "source": "disclosed",
+      "timestamp": "2025-07-23T15:15:59+0000"
+    },
+    {
+      "permalink": "https://www.instagram.com/reel/C4dsRF-u4hv/",
+      "thumbnail": "https://scontent-iad3-1.cdninstagram.com/v/t51.71878-15/503940839_1048320533402363_8195894121180345922_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qCV4f3dqSoMQ7kNvwFWJynE&_nc_oc=AdrsZ1OriA9CbiHsHUpueSAHzRaVci0ozLlPbnJsVrKUn9zzwhEXx2E4rdCZ3BvPwlY&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=6htMHwF0PdE4bhvgUr4lMg&_nc_tpa=Q5bMBQJ4bsZ2Mw3O_YEpQQaF6NeRYh51-Yj7OEC-GODf3R6I6ZjXqBgPH9Nosi7IDr2x-F_uMrzvgfXjrQ&oh=00_AQMdWkLUxHDs7XCYQZ4_4QiJ1OUTpXA7_I40Q8OjrCaTuA&oe=6ADF649A",
+      "title": "I just taught my human how to make an Al version of yours truly",
+      "excerpt": "I just taught my human how to make an Al version of yours truly using Pet Mixers in #FormAl, a pawsome suite of Al tools by @izea for influencer marke…",
+      "source": "disclosed",
+      "timestamp": "2024-03-13T18:08:42+0000"
+    }
+  ],
   "sourceUpdatedAt": {
-    "youtube": "2026-10-22T03:36:55+00:00",
-    "instagram": "2026-10-22T03:36:55+00:00",
-    "instagramPosts": "2026-10-22T03:36:55+00:00",
-    "facebook": "2026-10-22T03:36:55+00:00"
+    "youtube": "2026-10-22T03:39:53+00:00",
+    "instagram": "2026-10-22T03:39:53+00:00",
+    "instagramPosts": "2026-10-22T03:39:53+00:00",
+    "facebook": "2026-10-22T03:39:53+00:00"
   }
 }
