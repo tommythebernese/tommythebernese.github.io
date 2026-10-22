@@ -1,301 +1,51 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tommy the Bernese | Influencer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-serif { font-family: 'Playfair Display', serif; }
-        .bg-glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .video-placeholder { background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); }
-        .brand-gradient { background: linear-gradient(to right, #FF8A00, #5D45B0); }
-        .text-brand-orange { color: #FF8A00; }
-        .bg-brand-purple { background-color: #5D45B0; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        #mainNav { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        #navLogo { transition: transform 0.4s ease, opacity 0.3s ease; }
-        .nav-scrolled {
-            background: rgba(15, 15, 15, 0.85);
-            backdrop-filter: blur(12px);
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .polaroid-frame {
-            background: #fdfdfd;
-            padding: 16px 16px 60px 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transform: rotate(-2deg);
-            transition: transform 0.5s ease;
-        }
-        .polaroid-frame:hover { transform: rotate(0deg) scale(1.02); }
-        .polaroid-tint {
-            background: rgba(255, 138, 0, 0.08);
-            mix-blend-mode: multiply;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#201a20">
+  <meta name="description" content="Meet Tommy the Bernese: Dallas-based dog creator making warm, witty, story-led content for people and pet-loving brands.">
+  <meta property="og:title" content="Tommy the Bernese · Creator & Brand Partner">
+  <meta property="og:description" content="A very good dog. A thoughtful creative partner. Explore Tommy's work, reach and collaborations.">
+  <meta property="og:image" content="https://tommythebernese.github.io/heroimage.png">
+  <title>Tommy the Bernese · Creator & Brand Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600,40,1;9..144,700,40,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script defer src="/assets/site.js"></script>
 </head>
-<body class="bg-[#0f0f0f] text-gray-100">
-
-    <nav id="mainNav" class="fixed top-0 w-full z-50 py-6 px-8 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
-        <div class="w-[90px] md:w-[120px]">
-            <img id="navLogo" src="/logo1.png" alt="Tommy Logo" class="w-full h-auto object-contain">
-        </div>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#about" class="hover:text-brand-orange transition">About</a>
-            <a href="#stats" class="hover:text-brand-orange transition">Reach</a>
-            <a href="#portfolio" class="hover:text-brand-orange transition">Portfolio</a>
-            <a href="#contact" class="hover:text-brand-orange transition">Contact</a>
-        </div>
-        <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-brand-orange hover:text-white transition shadow-lg">
-            Collab
-        </a>
-    </nav>
-
-    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="/heroimage.png" alt="Tommy" class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-black/40"></div>
-        <div class="relative z-10 text-center px-4 max-w-4xl">
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-tight">
-                Meet <span class="text-brand-orange">Tommy</span>
-            </h1>
-            <p class="text-xl md:text-3xl font-serif italic mb-10 text-gray-300">The Internet's Goodest Boy.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-brand-orange text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">Work With Tommy</a>
-                <a href="#portfolio" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition">View Portfolio</a>
-            </div>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Tommy the Bernese home"><span class="paw">✳</span> TOMMY<span class="wordmark-small">THE BERNESE</span></a>
+    <nav aria-label="Main navigation"><a href="#about">Meet Tommy</a><a href="#work">The work</a><a href="#reach">The reach</a><a href="#contact" class="nav-cta">Let's collaborate <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="Tommy the Bernese sitting against a purple backdrop"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-content wrap">
+        <div class="eyebrow light"><span class="eyebrow-dot"></span> DALLAS-BASED DOG CREATOR</div>
+        <h1 id="hero-title">Good dog.<br><em>Great stories.</em></h1>
+        <p>Meet Tommy—a Bernese Mountain Dog with a talent for making people stop, smile, and feel something.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#contact">Partner with Tommy <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#work">Explore the work <span aria-hidden="true">↘</span></a></div>
+      </div>
+      <div class="hero-side-note">THE FACE. THE FUR. THE FEED.</div>
+      <div class="hero-bottom wrap"><span>WHOLESOME ENTERTAINMENT &amp; CREATOR-LED CAMPAIGNS</span><span>SCROLL TO MEET TOMMY ↓</span></div>
     </section>
-
-    <section id="stats" class="py-24 bg-white text-black relative">
-        <div class="max-w-6xl mx-auto px-8 text-center">
-            <div class="mb-16">
-                <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-gray-400 mb-2">Audience Impact</h2>
-                <h3 class="text-4xl md:text-6xl font-black italic font-serif">60K+ Total Followers Across Platforms</h3>
-            </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <a href="https://www.instagram.com/tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
-        <i data-lucide="instagram" class="w-8 h-8 mb-4 text-pink-600 group-hover:scale-110 transition-transform"></i>
-        <span class="text-5xl font-black mb-2">26K+</span>
-        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Instagram</span>
-    </a>
-    
-    <a href="https://www.facebook.com/tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
-        <i data-lucide="facebook" class="w-8 h-8 mb-4 text-blue-600 group-hover:scale-110 transition-transform"></i>
-        <span class="text-5xl font-black mb-2">36K+</span>
-        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">Facebook</span>
-    </a>
-    
-    <a href="https://www.tiktok.com/@tommythebernese" target="_blank" rel="noopener noreferrer" class="p-10 rounded-3xl border border-gray-100 shadow-xl bg-gray-50 flex flex-col items-center hover:scale-105 transition-transform group">
-        <i data-lucide="music-2" class="w-8 h-8 mb-4 text-black group-hover:scale-110 transition-transform"></i>
-        <span class="text-5xl font-black mb-2">2K+</span>
-        <span class="text-gray-500 font-medium tracking-wider uppercase text-sm">TikTok</span>
-    </a>
-</div>
-            </div>
-        </div>
-    </section>
-<section id="about" class="py-24 bg-[#1a1a1a]">
-        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="relative group flex justify-center">
-                <div class="absolute -inset-8 brand-gradient rounded-full opacity-20 group-hover:opacity-30 transition duration-1000 blur-3xl"></div>
-                <div class="polaroid-frame relative w-full max-w-[400px]">
-                    <div class="relative overflow-hidden aspect-[4/5] bg-gray-200">
-                        <div class="slideshow-container absolute inset-0">
-                            <img src="/photo1.jpg" alt="Tommy 1" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700">,
-                            <img src="/photo2.jpg" alt="Tommy 2" class="polaroid-slide absolute inset-0 w-full h-full object-contain bg-brand-purple/20 transition-opacity duration-700 opacity-0">
-                            <img src="/photo3.jpg" alt="Tommy 3" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                            <img src="/photo4.jpg" alt="Tommy 4" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                            <img src="/photo5.jpg" alt="Tommy 5" class="polaroid-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-                        </div>
-                        <div class="polaroid-tint absolute inset-0 pointer-events-none"></div>
-                    </div>
-                    <div class="pt-6 text-center">
-                        <p class="font-serif italic text-gray-800 text-xl">Dallas, TX</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="text-brand-orange font-bold uppercase tracking-widest text-sm mb-4">The Creator</h2>
-                <h3 class="text-5xl font-black mb-8 leading-tight">Born in California,<br>Raised in Texas,<br>Loved Everywhere.</h3>
-                <p class="text-xl text-gray-400 leading-relaxed mb-8">
-                    Born October 11, 2023, in Ramona, CA. Tommy blends humor, POV storytelling, and relatable Bernese charm to create content that sticks. 
-                </p>
-                <ul class="space-y-4">
-                    <li class="flex items-center space-x-3 text-gray-300">
-                        <i data-lucide="check-circle-2" class="text-brand-orange w-6 h-6"></i>
-                        <span>Wholesome & Funny Tone</span>
-                    </li>
-                    <li class="flex items-center space-x-3 text-gray-300">
-                        <i data-lucide="check-circle-2" class="text-brand-orange w-6 h-6"></i>
-                        <span>Professional Video & AI Editing</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio" class="py-24 bg-[#0f0f0f] overflow-hidden">
-        <div class="max-w-6xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                <div>
-                    <h2 class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-4">Content Showcase</h2>
-                    <h3 class="text-5xl font-black">Video Portfolio</h3>
-                </div>
-                <div class="flex gap-4">
-                    <button onclick="scrollPortfolio('left')" class="p-4 rounded-full border border-white/10 hover:bg-white/5 hover:border-brand-orange transition group">
-                        <i data-lucide="arrow-left" class="w-6 h-6 group-hover:text-brand-orange transition"></i>
-                    </button>
-                    <button onclick="scrollPortfolio('right')" class="p-4 rounded-full border border-white/10 hover:bg-white/5 hover:border-brand-orange transition group">
-                        <i data-lucide="arrow-right" class="w-6 h-6 group-hover:text-brand-orange transition"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="portfolioSlider" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-8">
-                </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-[#0f0f0f]">
-        <div class="max-w-4xl mx-auto px-8 text-center">
-            <h2 class="text-5xl md:text-7xl font-black mb-8 leading-tight">Let's create something <span class="text-brand-orange">viral.</span></h2>
-            <div class="bg-white/5 p-12 rounded-[3rem] border border-white/10 backdrop-blur-xl">
-                <p class="text-gray-400 mb-6 uppercase tracking-widest font-bold">Send an Inquiry</p>
-<a href="mailto:tommythebernese@gmail.com" 
-   class="text-xl sm:text-3xl md:text-5xl font-bold hover:text-brand-orange transition whitespace-nowrap overflow-hidden text-ellipsis block">
-    tommythebernese@gmail.com
-</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
-        <p>© 2026 Tommy the Bernese. All rights reserved.</p>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-
-        const portfolioVideos = [
-            { src: "/video1.mp4", cat: "Comedy", title: "When getting scratched by both ears", color: "bg-orange-600" },
-            { src: "/video2.mp4", cat: "UGC / Collab", title: "This is your sign to stock up on all your pets needs while they are getting groomed", color: "bg-green-600" },
-            { src: "/video3.mp4", cat: "UGC / Collab", title: "Traveling with Your Dog", color: "bg-green-600" },
-            { src: "/video11.mp4", cat: "AI", title: "Tommy on the sets of some of the most iconic Christmas movies 🎥🎅", color: "bg-sky-600" },
-            { src: "/video4.mp4", cat: "UGC / Collab", title: "My Dog's Favorite Recipe", color: "bg-green-600" },
-            { src: "/video9.mp4", cat: "Comedy", title: "Dream Vacation?", color: "bg-orange-600" },
-            { src: "/video5.mp4", cat: "UGC / Collab", title: "Big Breed Issues", color: "bg-green-600" },
-            { src: "/video6.mp4", cat: "UGC / Collab", title: "POV: You Love Watching Sports with Your Dog", color: "bg-green-600" },
-            { src: "/video7.mp4", cat: "UGC / Collab", title: "Pack with Me and My Dog", color: "bg-green-600" },
-            { src: "/video8.mp4", cat: "UGC / Collab", title: "Better Diet, Healthier Pups", color: "bg-green-600" },
-            { src: "/video10.mp4", cat: "Comedy", title: "Tommy Getting Hangry", color: "bg-orange-600" }
-        ];
-
-        function handleVideoError(el) {
-            el.classList.add('hidden');
-            el.parentElement.classList.add('video-placeholder');
-        }
-
-        async function safePlay(el) {
-            try {
-                if (el.paused) {
-                    const playPromise = el.play();
-                    if (playPromise !== undefined) {
-                        await playPromise;
-                    }
-                }
-            } catch (err) {
-                console.log("Playback prevented:", err);
-            }
-        }
-
-        async function togglePlay(container) {
-            const video = container.querySelector('video');
-            const playIcon = container.querySelector('.play-icon');
-            
-            if (video.paused) {
-                await safePlay(video);
-                playIcon.style.opacity = '0';
-            } else {
-                video.pause();
-                playIcon.style.opacity = '1';
-            }
-        }
-
-        function renderPortfolio() {
-            const container = document.getElementById('portfolioSlider');
-            container.innerHTML = portfolioVideos.map(video => `
-                <div class="flex-shrink-0 w-full md:w-[320px] snap-center">
-                    <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden relative group cursor-pointer shadow-2xl border border-white/5" 
-                         onclick="togglePlay(this)">
-                        <video 
-                            src="${video.src}#t=0.001" 
-                            class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" 
-                            muted 
-                            loop 
-                            playsinline
-                            preload="metadata"
-                            onerror="handleVideoError(this)">
-                        </video>
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <i data-lucide="play" class="play-icon w-16 h-16 text-white/30 group-hover:text-brand-orange group-hover:scale-110 transition opacity-100"></i>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent pointer-events-none">
-                            <span class="${video.color} text-white text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">${video.cat}</span>
-                            <h4 class="text-lg font-bold">${video.title}</h4>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-            lucide.createIcons();
-        }
-
-        renderPortfolio();
-
-        // Nav Scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('mainNav');
-            const logo = document.getElementById('navLogo');
-            if (window.scrollY > 100) {
-                nav.classList.add('nav-scrolled');
-                logo.style.transform = 'scale(0.9)';
-            } else {
-                nav.classList.remove('nav-scrolled');
-                logo.style.transform = 'scale(1)';
-            }
-        });
-
-        function scrollPortfolio(direction) {
-            const slider = document.getElementById('portfolioSlider');
-            const move = direction === 'left' ? -350 : 350;
-            slider.scrollBy({ left: move, behavior: 'smooth' });
-        }
-// Slideshow
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.polaroid-slide');
-        setInterval(() => {
-            if (slides.length > 0) {
-                slides[currentSlide].style.opacity = '0';
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].style.opacity = '1';
-            }
-        }, 2000);
-
-        function scrollPortfolio(direction) {
-            const slider = document.getElementById('portfolioSlider');
-            const move = direction === 'left' ? -350 : 350;
-            slider.scrollBy({ left: move, behavior: 'smooth' });
-        }
-</script>
+    <section class="intro-band"><div class="wrap intro-inner"><span>THE CREATOR</span><p>Big personality. Bigger heart. <em>Stories that stay with you.</em></p><span class="asterisk">✳</span></div></section>
+    <section id="about" class="about section-pad"><div class="wrap about-grid">
+      <div class="about-visual"><img src="/about.JPG" alt="Tommy the Bernese Mountain Dog" loading="lazy"><div class="photo-sticker">100%<br><span>GOOD BOY</span></div></div>
+      <div class="about-copy"><div class="eyebrow">01 / MEET TOMMY</div><h2>Not your average <em>brand ambassador.</em></h2><p>Tommy is a California-born, Texas-raised Bernese Mountain Dog creating feel-good stories from everyday life. His content pairs canine charm with humor, thoughtful production, and an unmistakable point of view.</p><p>From the first second of a Reel to the last tail wag, Tommy gives brands a natural place in stories people actually want to watch.</p><div class="pill-row"><span>Pet &amp; lifestyle</span><span>Humor &amp; POV</span><span>Video storytelling</span></div></div>
+    </div></section>
+    <section class="marquee" aria-label="Creative strengths"><div>REAL MOMENTS <span>✳</span> BIG FEELINGS <span>✳</span> GOOD STORIES <span>✳</span> REAL MOMENTS <span>✳</span> BIG FEELINGS <span>✳</span> GOOD STORIES <span>✳</span></div></section>
+    <section id="work" class="work section-pad"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">02 / THE WORK</div><h2>Made to be <em>watched.</em></h2></div><p>Personality-led content with room for your brand to feel right at home.</p></div><div id="featured-work" class="work-grid"></div><div class="work-bottom"><p>Want to see a specific format or campaign fit?</p><a class="text-link" href="mailto:tommythebernese@gmail.com?subject=Tommy%20the%20Bernese%20collaboration">Let's talk ideas <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="partnerships" class="partnerships section-pad"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">03 / BRAND STORIES</div><h2>Partnerships with <em>personality.</em></h2></div><p>Recent Instagram posts with an ad disclosure or an owner-confirmed partnership.</p></div><div id="partner-posts" class="partner-grid" aria-live="polite"><p class="empty-note">Connecting Tommy's Instagram will bring disclosed brand posts here automatically.</p></div><p class="fine-print">Only disclosed or confirmed work is shown as a partnership. New posts sync after the daily data refresh.</p></div></section>
+    <section id="reach" class="reach section-pad"><div class="wrap"><div class="section-heading"><div><div class="eyebrow">04 / THE REACH</div><h2>A community that <em>cares.</em></h2></div><p>Audience and content signals for brand planning. Numbers below are shown only when connected to their source.</p></div><div id="insight-cards" class="insight-grid" aria-live="polite"></div><div class="reach-lower"><div><h3>Find Tommy everywhere.</h3><p>Follow the journey across four channels.</p></div><div id="social-links" class="social-grid"></div></div><p id="data-date" class="fine-print"></p></div></section>
+    <section class="offer section-pad"><div class="wrap offer-grid"><div><div class="eyebrow">05 / CREATE TOGETHER</div><h2>A few ways we can <em>make magic.</em></h2></div><div class="offer-list"><div><span>01</span><h3>Sponsored stories</h3><p>Short-form video that gives your product a genuine role in Tommy's world.</p></div><div><span>02</span><h3>UGC for your channels</h3><p>Creator-led assets built for your own social and paid media.</p></div><div><span>03</span><h3>Longer partnerships</h3><p>A recognizable recurring character for campaigns that grow over time.</p></div></div></div></section>
+    <section id="contact" class="contact section-pad"><div class="wrap contact-inner"><div class="eyebrow light">READY WHEN YOU ARE</div><h2>Let's make something <em>worth sharing.</em></h2><p>Tell us about your brand, timeline, and the story you want to tell. Tommy's team would love to hear it.</p><a class="button button-light" href="mailto:tommythebernese@gmail.com?subject=Partner%20with%20Tommy">Email Tommy's team <span aria-hidden="true">↗</span></a><div class="contact-email">tommythebernese@gmail.com</div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="wordmark" href="#top"><span class="paw">✳</span> TOMMY<span class="wordmark-small">THE BERNESE</span></a><span>© <span id="year">2026</span> Tommy the Bernese</span><div><a href="/privacy.html">Privacy</a><a href="/delete-data.html">Data deletion</a></div></div></footer>
 </body>
 </html>
