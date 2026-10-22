@@ -1,0 +1,53 @@
+name: Refresh creator data
+on:
+  schedule:
+    - cron: '23 10 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch authorized platform data
+        id: fetch
+        continue-on-error: true
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ vars.INSTAGRAM_USER_ID }}
+          FACEBOOK_PAGE_ID: ${{ vars.FACEBOOK_PAGE_ID }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          TIKTOK_ROTATED_TOKEN_FILE: ${{ runner.temp }}/tiktok_refresh_token
+        run: python scripts/update_social.py
+      - name: Persist rotated TikTok refresh token
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.SOCIAL_SECRETS_PAT }}
+        run: |
+          if [ -f "${RUNNER_TEMP}/tiktok_refresh_token" ]; then
+            if [ -z "${GH_TOKEN}" ]; then
+              echo 'TikTok refresh token rotated. Add SOCIAL_SECRETS_PAT to enable secret rotation.' >&2
+              exit 1
+            fi
+            gh secret set TIKTOK_REFRESH_TOKEN --repo "${GITHUB_REPOSITORY}" < "${RUNNER_TEMP}/tiktok_refresh_token"
+            rm -f "${RUNNER_TEMP}/tiktok_refresh_token"
+          fi
+      - name: Commit refreshed public JSON
+        run: |
+          if ! git diff --quiet -- data/social.json; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/social.json
+            git commit -m 'Refresh public creator data'
+            git push
+          fi
+      - name: Report API errors
+        if: ${{ steps.fetch.outcome == 'failure' }}
+        run: exit 1
