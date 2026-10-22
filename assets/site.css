@@ -10,3 +10,29 @@
 .partner-grid .empty-note{flex:1 0 100%}
 @media(max-width:900px){.partner-card{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:650px){.partner-grid{gap:14px}.partner-card{flex-basis:min(82vw,360px)}}
+
+/* Airy, Instagram-inspired partnership gallery with a featured center card. */
+.brand-icon,.intro-mark{object-fit:contain;border-radius:0;background:transparent}
+.partnerships{position:relative;overflow:hidden;background:#b9dff6}
+.partnerships:before,.partnerships:after{content:'';position:absolute;pointer-events:none;border-radius:50%;background:rgba(255,255,255,.27)}
+.partnerships:before{width:68vw;height:68vw;top:-42vw;right:-17vw}
+.partnerships:after{width:38vw;height:38vw;bottom:-26vw;left:-9vw}
+.partnerships>.wrap{position:relative;z-index:1}
+.partnerships .eyebrow{color:#31587b}
+.partner-grid{gap:28px;align-items:center;min-height:660px;margin:0 -28px;padding:34px max(28px,calc(50% - 220px)) 42px;scroll-snap-type:x proximity;scrollbar-width:none;cursor:ew-resize}
+.partner-grid::-webkit-scrollbar{display:none}
+.partner-card{flex:0 0 440px;min-height:585px;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.75);border-radius:28px;background:#fff;box-shadow:0 12px 24px rgba(23,58,81,.12);transform:scale(.88);opacity:.78;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;scroll-snap-align:center;cursor:default}
+.partner-card.is-active{transform:scale(1);opacity:1;box-shadow:0 28px 60px rgba(23,58,81,.23)}
+.partner-card-head{height:67px;display:flex;align-items:center;gap:11px;padding:11px 18px;font-size:13px;font-weight:700}
+.partner-card-head img{width:38px;height:38px;aspect-ratio:auto;object-fit:contain;border:0;border-radius:50%;background:#f3e8dd}
+.partner-card-head small{margin-left:auto;color:#6a6770;font-size:9px;letter-spacing:.13em}
+.partner-card .partner-media{width:calc(100% - 32px);height:326px;margin:0 16px;aspect-ratio:auto;object-fit:cover;border-radius:15px;background:#f1e9e0}
+.partner-card-content{padding:21px 24px 25px;display:flex;flex-direction:column;flex:1}
+.partner-card h3{font-size:22px;line-height:1.16;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.partner-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:4px 0 0}
+.partner-card a{margin-top:auto;padding-top:15px;align-self:flex-start}
+.partner-grid .empty-note{min-height:0;background:rgba(255,255,255,.7);border:0;border-radius:20px}
+.partnerships .fine-print{color:#3e5765}
+@media(max-width:900px){.partner-grid{min-height:620px;padding-inline:max(28px,calc(50% - 200px))}.partner-card{flex-basis:400px;min-height:550px}.partner-card .partner-media{height:300px}}
+@media(max-width:650px){.partner-grid{gap:16px;min-height:540px;margin:0 -18px;padding:24px max(18px,calc(50% - 39vw)) 32px}.partner-card{flex-basis:78vw;min-height:500px;border-radius:22px}.partner-card-head{height:58px}.partner-card .partner-media{height:240px}.partner-card h3{font-size:19px}.partner-card-content{padding:17px 18px 21px}}
+@media(prefers-reduced-motion:reduce){.partner-card{transition:none}}
