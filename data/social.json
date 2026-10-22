@@ -1,16 +1,18 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-10-22T03:06:04+00:00",
   "followers": {
     "instagram": null,
     "facebook": null,
     "tiktok": null,
-    "youtube": null
+    "youtube": 523
   },
   "insights": {
     "instagramRecentAverageInteractions": null,
     "instagramRecentAverageViews": null,
-    "youtubeViews": null
+    "youtubeViews": 482385
   },
   "partnerships": [],
-  "sourceUpdatedAt": {}
+  "sourceUpdatedAt": {
+    "youtube": "2026-10-22T03:06:04+00:00"
+  }
 }
